@@ -1,7 +1,7 @@
 # Import dependencies
-from splinter import Browser 
+from splinter import Browser #type: ignore
 from bs4 import BeautifulSoup as soup 
-from webdriver_manager.chrome import ChromeDriverManager 
+from webdriver_manager.chrome import ChromeDriverManager #type: ignore
 import pandas as pd 
 import datetime as dt
 
