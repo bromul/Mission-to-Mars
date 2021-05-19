@@ -1,7 +1,7 @@
 # Import dependencies
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
-import scraping 
+import scraping #type: ignore
 
 # Set up flask
 app = Flask(__name__)
@@ -24,7 +24,6 @@ def scrape():
     mars_data = scraping.scrape_all()
     mars.update({}, mars_data, upsert=True)
     return redirect('/', code=302)
-
 
 # Run flask
 if __name__ == '__main__':
